@@ -37,7 +37,7 @@ function CollapsibleExample() {
           />
         </div>
       </div>
-      <div className="px-5 pr-2 sm:pr-1 lg:pr-10">
+      <div className="px-3 pr-2 sm:pr-1 lg:pr-10">
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mx-auto">
           <Nav.Link href="#">About</Nav.Link>

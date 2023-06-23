@@ -1,16 +1,23 @@
+import Button from "@mui/material/Button";
 
-
-function Herosection() {
+function HeroSection() {
   return (
-   <div className="bg-hero px-25 bg-[#990000] h-400 w-full">
-   <div className="pl-5">
-    <p className="bold">Hello, I am </p>
-    <h1 className="text-[#102255] transition duration-150 ease-in-out font-bold text-5xl ">Gautam Rai</h1>
-    <h4>I build For the Web</h4>
+    <div className="bg-hero px-25 bg-gray-300 h-400 w-full cursor-pointer mx-auto md:mx-150 flex flex-wrap py-10">
+      <div className="w-full md:w-6/12 pl-10 flex flex-col justify-center items-center md:items-start lg:items-center">
+        <h1 className="text-2xl md:text-3xl font-bold mb-2">Hi, I am</h1>
+        <strong className="text-3xl md:text-4xl font-bold mb-2">
+          Gautam Rai
+        </strong>
+        <h3 className="text-lg md:text-xl mb-4">I build for the web.</h3>
+      </div>
+      <div className="w-full md:w-6/12 pl-5 flex flex-col justify-center items-center md:items-center ">
+        <h1 className=" text-2xl md:text-3xl font-bold mb-2">Check My Resume</h1>
+        <Button variant="outlined" color="primary">
+          Resume
+        </Button>
+      </div>
     </div>
-   </div>
-   
   );
 }
 
-export default Herosection
+export default HeroSection;
