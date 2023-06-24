@@ -1,4 +1,5 @@
 
+import Aboutme from "./components/Aboutme"
 import Header from "./components/Header"
 import Herosection from "./components/Herosection"
 
@@ -8,6 +9,7 @@ function App() {
    <div>
     <Header />
     <Herosection />
+    <Aboutme />
   </div>
   )
 }
