@@ -21,8 +21,11 @@ function Aboutme() {
         </p>
       </div>
       <div className="w-full md:w-6/12 pl-5 flex flex-col justify-center items-center md:items-center">
-      <h1>hello</h1>
-        <img></img>
+        <img
+          className="h-full w-[70%] sm:w-[80%] lg:w-6/12 py-4 lg:pr-10 px-2 blur-0 lg:blur-sm hover:blur-none"
+          src="https://avatars.githubusercontent.com/u/124668418?v=4"
+          alt="dp.png"
+        />
       </div>
     </div>
   );
