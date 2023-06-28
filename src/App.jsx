@@ -2,6 +2,7 @@
 import Aboutme from "./components/Aboutme"
 import Header from "./components/Header"
 import Herosection from "./components/Herosection"
+import Contactme from "./components/contactme"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <Header />
     <Herosection />
     <Aboutme />
+    <Contactme />
   </div>
   )
 }
