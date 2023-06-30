@@ -1,46 +1,58 @@
 import { Button } from "@mui/material";
+import { useState } from "react";
 
-function Contactme() {
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the form from submitting normally
+// eslint-disable-next-line react/prop-types
+const Contactme = ({ data }) => {
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const email = "raigautam2004@gmail.com";
 
-    // Your email sending logic goes here
-    // You can use a library like Nodemailer to send the email from a server-side environment
+  console.log(data);
 
-    // For demonstration purposes, let's log a message to the console
-    console.log("Form submitted and email sent to raigautam2004@gmail.com");
+  const handleClick = (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=Name: ${name}%0D%0A%0D%0AMessage: ${message}`;
+    window.location.href = mailtoLink;
   };
 
   return (
-    <div className="flex justify-center">
-      <div>
+    <div className="w-full cursor-pointer mx-auto md:mx-150 flex flex-wrap py-10">
+      <div className="w-full md:w-6/12 pl-10 flex flex-col justify-center items-center md:items-start lg:items-center">
         <h1>Contact Me</h1>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          className="w-[50%] mb-6 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out  "
-        />
-        <input
-          type="email"
-          placeholder="Email address"
-          className="w-[50%]  mb-6 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row "
-        />
-        <input
-          type="text"
-          placeholder="Subject"
-          className="w-[50%]  mb-6 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row"
-        />
-        <input
-          type="text"
-          placeholder="Message"
-          className="w-[50%] mb-6 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row"
-        />
-        <Button type="submit"/>
-      </form>
+      <div className="bg-slate-500 w-full mb-3 md:w-6/12 pl-5 flex flex-col justify-center items-center md:items-center">
+        <form>
+          <input
+            value={name}
+            type="text"
+            placeholder="Name"
+            name="name"
+            className="w-full py-2 mb-3 mt-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Subject"
+            name="subject"
+            className="w-full py-2 mb-3 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row"
+            onChange={(e) => setSubject(e.target.value)}
+          />
+          <input
+            value={message}
+            type="text"
+            placeholder="Message"
+            name="message"
+            className="w-full py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row"
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <Button className="bg-red-400" type="submit" onClick={handleClick}>
+            Submit
+          </Button>
+        </form>
+      </div>
     </div>
   );
-}
+};
 
 export default Contactme;
