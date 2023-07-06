@@ -1,58 +1,115 @@
-import { Button } from "@mui/material";
-import { useState } from "react";
+import {useState , useRef} from 'react';
+import  { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
-// eslint-disable-next-line react/prop-types
-const Contactme = ({ data }) => {
-  const [name, setName] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const email = "raigautam2004@gmail.com";
+import { EarthCanvas } from './canvas';
+import { slideIn } from '../utils/motion';
 
-  console.log(data);
+function Contactme() {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    const mailtoLink = `mailto:${email}?subject=${subject}&body=Name: ${name}%0D%0A%0D%0AMessage: ${message}`;
-    window.location.href = mailtoLink;
-  };
 
-  return (
-    <div className="w-full cursor-pointer mx-auto md:mx-150 flex flex-wrap py-10">
-      <div className="w-full md:w-6/12 pl-10 flex flex-col justify-center items-center md:items-start lg:items-center">
-        <h1>Contact Me</h1>
-      </div>
-      <div className="bg-slate-500 w-full mb-3 md:w-6/12 pl-5 flex flex-col justify-center items-center md:items-center">
-        <form>
-          <input
-            value={name}
-            type="text"
-            placeholder="Name"
-            name="name"
-            className="w-full py-2 mb-3 mt-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            className="w-full py-2 mb-3 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row"
-            onChange={(e) => setSubject(e.target.value)}
-          />
-          <input
-            value={message}
-            type="text"
-            placeholder="Message"
-            name="message"
-            className="w-full py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out flex flex-row"
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <Button className="bg-red-400" type="submit" onClick={handleClick}>
-            Submit
-          </Button>
-        </form>
-      </div>
-    </div>
-  );
+const handleChange = (e) => {
+  const { target } = e;
+  const { name, value } = target;
+
+  setForm({
+    ...form,
+    [name]: value,
+  });
 };
 
-export default Contactme;
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .send(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "JavaScript Mastery",
+        from_email: form.email,
+        to_email: "sujata@jsmastery.pro",
+        message: form.message,
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    )
+};
+
+
+  return (
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    >
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75] bg-black p-8 rounded-2xl"
+      >
+        <p className='text-white'>Get in touch</p>
+        <h3 className='text-white'>Contact.</h3>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="mt-12 flex flex-col gap-8"
+        >
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Name</span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="What's your good name?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="What's your web address?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              rows={7}
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What you want to say?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+
+          <button
+            type="submit"
+            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+          >
+          
+          </button>
+        </form>
+      </motion.div>
+
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
+      </motion.div>
+    </div>
+  );
+}
+
+export default Contactme
