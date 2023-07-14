@@ -2,8 +2,9 @@
 import Aboutme from "./components/Aboutme"
 import Header from "./components/Header"
 import Herosection from "./components/Herosection"
-import Carousel from "./components/Project"
-import Contactme from "./components/contactme"
+import Project from "./components/Project"
+import Contactme from "./components/Contactme"
+import Skills from "./components/skills"
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
     <Header />
     <Herosection />
     <Aboutme />
-    <Carousel />
+    <Skills />
+    <Project/>
     <Contactme />
   </div>
   )
