@@ -1,6 +1,62 @@
+import "./Hero.scss";
+import { useState,useEffect } from "react";
 
 export default function Herosection() {
+  // eslint-disable-next-line no-unused-vars
+  let bubleArr = [];
+  document.addEventListener("mousemove", (e) => {
+    let bubles = document.createElement("bubles");
+    let x = e.pageX;
+    let y = e.pageY;
+    let size = Math.random() * 60;
+    bubles.style.width = 1 + size + "px";
+    bubles.style.height = 1 + size + "px";
+    bubles.style.left = x - size / 2 + "px";
+    bubles.style.top = y - size / 2 + "px";
+    document.body.appendChild(bubles);
+    setTimeout(function () {
+      bubles.remove();
+      console.log("tu sam");
+    }, 5000);
+  });
+
+  const [opacity, setOpacity] = useState(0);
+
+  useEffect(() => {
+    setOpacity(1); // Set opacity to 1 when the component mounts
+  }, []);
+
+  
+
   return (
-    <div>Herosection</div>
-  )
+    <section id="hero" className="mt-0">
+      <div id="bubbles"></div>
+      <div id="bubbles2"></div>
+      <div id="bubbles3"></div>
+      <div className="flex max-sm:flex-col align-center justify-center my-[20%] sm:my-20">
+        <div
+          className="fade-in w-full grid place-content-center"
+          style={{ opacity }}
+        >
+          <h1 className="text-white">
+            Hi, I am <span className="name text-[#60ffd9]">Gautam Rai</span>
+          </h1>
+          <p className="font-light text-5xl text-[#8892b6]">
+            I build for the Web.
+          </p>
+        </div>
+        <div
+          className="fade-in w-full my-4 sm:my-0 text-center"
+          style={{ opacity }}
+        >
+          <img
+            src="../../IMAGES/undraw_programmer_re_owql.svg"
+            alt=""
+            className="front-img w-6/12 h-6/12 inline-block"
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
+

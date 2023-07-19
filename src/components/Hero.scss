@@ -1,0 +1,167 @@
+// Import external fonts or reset default styles here if needed
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+#hero {
+    background: radial-gradient(circle, #342c2c, #2b2527, #221f20, #191819, #111111);
+    color: #60ffd9;
+    font-size: 30px;
+    margin-top: 0;
+    height: 95vh;
+    user-select: none;
+    overflow: hidden;
+    z-index: 0;
+}
+@keyframes colorgen {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes float {
+    0% {
+        margin-left: -30px;
+    }
+
+    50% {
+        margin-left: 30px;
+    }
+
+    100% {
+        margin-left: -30px;
+    }
+}
+
+:root {
+    --speed: 10s;
+    --coloring: #60ffd9;
+    --direction: 2000;
+}
+
+@function multiple-box-shadow($n) {
+    $value: "#{random(2000)}px #{random(2000)}px var(--coloring)";
+
+    @for $i from 2 through $n {
+        $value: "#{$value} , #{random(2000)}px #{random(2000)}px var(--coloring)";
+    }
+
+    @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(300);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(200);
+
+#hero #bubbles {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: animStar linear infinite;
+    animation-duration: calc(var(--speed) * 6);
+    border-radius: 100%;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: -2000px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $shadows-small;
+        border-radius: 100%;
+    }
+}
+
+#hero #bubbles2 {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: animStar linear infinite;
+    animation-duration: calc(var(--speed) * 4);
+    border-radius: 100%;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 4px;
+        height: 4px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+        border-radius: 100%;
+    }
+}
+
+#hero #bubbles3 {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: animStar linear infinite;
+    animation-duration: calc(var(--speed) * 5);
+    border-radius: 100%;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: -2000px;
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        box-shadow: $shadows-big;
+        border-radius: 100%;
+    }
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(-200px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    /* Set the initial opacity to 0 to hide the div */
+    animation: fadeInAnimation 1.5s ease-in-out;
+    /* Set the fadeIn animation */
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.name{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Lugrasimo', cursive;
+    filter: drop-shadow(0 0.5px 0.5px #fff );
+}
+
+.front-img{
+    filter: drop-shadow(0 8px 8px #60ffd9);
+}
+
+h1,p {
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+
+

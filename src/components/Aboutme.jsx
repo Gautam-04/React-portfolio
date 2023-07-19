@@ -2,6 +2,9 @@
 
 export default function Aboutme() {
   return (
-    <div>Aboutme</div>
+    <section id='About'>
+    <h1>Hello World</h1>
+</section>
   )
 }
+
