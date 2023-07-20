@@ -33,7 +33,7 @@ function CustomNavbar() {
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#">About</Nav.Link>
+            <Nav.Link href="#About">About</Nav.Link>
             <Nav.Link href="#">Projects</Nav.Link>
             <Nav.Link href="#">Contact</Nav.Link>
           </Nav>

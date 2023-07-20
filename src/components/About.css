@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+#About{
+    background: radial-gradient(circle, #342c2c, #2b2527, #221f20, #191819, #111111);
+    }
+
+.dp-image{
+    border-radius: 50%;
+    filter: drop-shadow(0 2px 4px #60ffd9);
+}
+
+.dp-image:hover{
+            filter: drop-shadow(0 2px 8px #60ffd9);
+            z-index: 3;
+}
+
+.about-head,.skills-heading{
+    font-size: 50px;
+        font-weight: 400;
+        font-family: 'Lugrasimo', cursive;
+        filter: drop-shadow(0 0.5px 0.5px #fff);
+}
+
+.text{
+    font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+}
+
+.marquee-container{
+    width: 101%;
+}
+
+.text:hover{
+    filter: drop-shadow(0 2px 8px #09172b);
+}
+
+.skill--box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 10px;
+}
+
+.skill-image {
+    width: 60px;
+    height: 50px;
+}

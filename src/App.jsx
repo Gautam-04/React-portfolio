@@ -4,7 +4,6 @@ import Header from "./components/Header"
 import Herosection from "./components/Herosection"
 import Project from "./components/Project"
 import Contactme from "./components/Contactme"
-import Skills from "./components/skills"
 
 function App() {
 
@@ -13,7 +12,6 @@ function App() {
     <Header />
     <Herosection />
     <Aboutme />
-    <Skills />
     <Project/>
     <Contactme />
   </div>
