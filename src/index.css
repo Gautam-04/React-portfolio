@@ -9,5 +9,6 @@ html {
 }
 
 body{
+    overflow: hidden;
     background: radial-gradient(circle, #342c2c, #2b2527, #221f20, #191819, #111111);
 }
