@@ -44,6 +44,12 @@ export default function Herosection() {
           <p className="font-light text-5xl text-[#8892b6]">
             I build for the Web.
           </p>
+          <a href="https://react.school">
+            <button className="resume-button bg-[#09172b] text-[#8892b6] rounded-md mx-auto px-3 my-2">
+              {" "}
+              Link Button{" "}
+            </button>
+          </a>
         </div>
         <div
           className="fade-in w-full my-4 sm:my-0 text-center"

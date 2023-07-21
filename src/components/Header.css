@@ -54,6 +54,21 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.nav-link::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #60ffd9;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
 .nav-link:hover {
     color: #FFFFFF;
 } 
@@ -61,5 +76,11 @@
 @media (max-width: 600px) {
     .container {
         margin-left: 5px;
+    }
+}
+
+@media (max-width: 340px) {
+    .custom-navbar{
+        width: 330px;
     }
 }

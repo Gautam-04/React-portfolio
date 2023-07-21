@@ -1,14 +1,38 @@
 import './About.css';
+import { useState, useEffect } from 'react';
 import Marquee from "react-fast-marquee";
 import { skillsData } from '../Data/SkillsData'
 import { skillsImage } from "../utils/SkillsImage";
  
 
 export default function Aboutme() {
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+
   const marqueeStyle = {
-    width: "101%", // Set the width to 101%
+    width: "101%", // Set the width to 101% by default
     paddingTop: "4px",
   };
+
+  useEffect(() => {
+    // Check if the screen width is less than or equal to 768 pixels (you can adjust this value as needed)
+    const handleResize = () => {
+      setIsSmallDevice(window.innerWidth <= 768);
+    };
+
+    // Add event listener to track screen resize
+    window.addEventListener("resize", handleResize);
+
+    // Call handleResize initially to set the state correctly on page load
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // If it's a small device, update the width in the marqueeStyle object
+  if (isSmallDevice) {
+    marqueeStyle.width = "345px";
+  }
 
   return (
     <section id="About">

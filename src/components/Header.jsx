@@ -15,7 +15,8 @@ function CustomNavbar() {
       collapseOnSelect
       expand="lg"
       className="custom-navbar"
-      expanded={expanded} >
+      expanded={expanded}
+    >
       <div className="container">
         <Navbar.Brand href="#home">
           <img
@@ -34,8 +35,8 @@ function CustomNavbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link href="#About">About</Nav.Link>
-            <Nav.Link href="#">Projects</Nav.Link>
-            <Nav.Link href="#">Contact</Nav.Link>
+            <Nav.Link href="#Project">Projects</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </div>

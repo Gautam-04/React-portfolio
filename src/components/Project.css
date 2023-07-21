@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+/* #Project {
+        background: radial-gradient(circle, #342c2c, #2b2527, #221f20, #191819, #111111);
+} */
+.project-head{
+        font-size: 50px;
+                font-weight: 400;
+                font-family: 'Lugrasimo', cursive;
+                filter: drop-shadow(0 0.5px 0.5px #fff);
+                color: #60ffd9;
+}
+
+.project-section {
+        position: relative !important;
+        padding-top: 10px !important;
+}
+
+.project-card {
+        padding-top: 20px;
+        padding-bottom: 50px !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        height: auto !important;
+        justify-content: space-between;
+}
+
+.card-text {
+        font-family: 'Montserrat', sans-serif;
+}
+
+.project-card-view {
+        color:#fff !important;
+        background-color: #09172b !important;
+        border: transparent;
+        opacity: 0.9 !important;
+        transition: all 0.5s ease 0s !important;
+        height: 100% !important;
+        border-radius: 15px;
+        filter: drop-shadow(0 2px 4px #60ffd9);
+}
+
+.project-card-view:hover {
+        transform: scale(1.02) !important;
+        overflow: hidden !important;
+        filter: drop-shadow(0 2px 4px #60ffd9);
+}
+
+.card-title{
+        font-family: 'Lugrasimo', cursive;
+                filter: drop-shadow(0 0.5px 0.5px #fff);
+                color: #60ffd9;
+}
+
+.card-img-top {
+        padding: 20px !important;
+        opacity: 0.8 !important;
+        border-radius: 10px !important;
+}
+
+.viewbtn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 18px !important;
+        letter-spacing: 1px;
+        font-family: 'Montserrat' !important;
+margin-top: auto;
+                
+                /* This will horizontally center the button within the card */
+}
+
+.btn-primary {
+        color:#8892b6 !important;
+        background-color: transparent !important;
+        border-color: #8892b6 !important;
+}
+
+.btn-primary:hover {
+        color: #60ffd9 !important;
+        background-color: transparent !important;
+        border-color: #60ffd9 !important;
+}
+
+.btn:focus {
+        outline: none !important;
+        box-shadow: none !important;
+}
