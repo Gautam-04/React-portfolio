@@ -4,10 +4,10 @@
 
 #hero {
     // background: radial-gradient(circle, #342c2c, #2b2527, #221f20, #191819, #111111);
-    color: #60ffd9;
+    color: #60ffd9 !important;
     font-size: 30px;
     margin-top: 0;
-    height:100vh;
+    height:100vh !important;
     user-select: none;
     overflow: hidden;
     z-index: 0;
