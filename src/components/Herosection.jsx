@@ -56,7 +56,7 @@ export default function Herosection() {
           style={{ opacity }}
         >
           <img
-            src="../../IMAGES/undraw_programmer_re_owql.svg"
+            src="../../IMAGES\undraw_programmer_re_owql.svg"
             alt=""
             className="front-img w-6/12 h-6/12 inline-block"
           />
