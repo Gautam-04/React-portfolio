@@ -21,7 +21,8 @@ function CustomNavbar() {
         <Navbar.Brand href="#home">
           <img
             alt=""
-            src="static\IMAGES\LOGO.svg"
+            // eslint-disable-next-line no-undef
+            src={require("static/IMAGES/LOGO.svg")}
             width="30"
             height="30"
             className="navbar-brand-img"
