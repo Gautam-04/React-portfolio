@@ -35,7 +35,7 @@ export default function Herosection() {
       <div id="bubbles3"></div>
       <div className="flex max-sm:flex-col align-center justify-center my-[20%] sm:my-20">
         <div
-          className="fade-in w-full grid place-content-center"
+          className="fade-in w-full grid place-content-center py-32"
           style={{ opacity }}
         >
           <h1 className="text-white">
