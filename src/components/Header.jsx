@@ -22,7 +22,7 @@ function CustomNavbar() {
           <img
             alt=""
             // eslint-disable-next-line no-undef
-            src={require("static/IMAGES/LOGO.svg")}
+            src="../IMAGES/LOGO.svg"
             width="30"
             height="30"
             className="navbar-brand-img"
