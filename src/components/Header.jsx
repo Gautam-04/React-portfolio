@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Brand from "../../IMAGES/LOGO.png"
 import "./Header.css";
 
 function CustomNavbar() {
@@ -21,7 +22,7 @@ function CustomNavbar() {
         <Navbar.Brand href="#home">
           <img
             alt=""
-            src="../../IMAGES\LOGO.png"
+            src={Brand}
             width="30"
             height="30"
             className="navbar-brand-img"
