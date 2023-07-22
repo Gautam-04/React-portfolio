@@ -1,5 +1,6 @@
 import "./Hero.scss";
 import { useState,useEffect } from "react";
+import Undraw from "../assets/svg/skills/heroimg.svg";
 
 export default function Herosection() {
   // eslint-disable-next-line no-unused-vars
@@ -56,7 +57,7 @@ export default function Herosection() {
           style={{ opacity }}
         >
           <img
-            src="../../IMAGES\undraw_programmer_re_owql.png"
+            src={Undraw}
             alt=""
             className="front-img w-6/12 h-6/12 inline-block"
           />
