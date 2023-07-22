@@ -1,7 +1,7 @@
 import './Project.css'
 import ProjectCard from './ProjectCard'
-import Blogimg from '../../static/IMAGES/Projects/Blog.png'
-import Upcoming from "../../static/IMAGES/Projects/Upcoming.jpg";
+import Blogimg from '../../IMAGES/Projects/Blog.png'
+import Upcoming from "../../IMAGES/Projects/Upcoming.jpg";
 import { Row,Col } from 'react-bootstrap'
 
 export default function Project() {

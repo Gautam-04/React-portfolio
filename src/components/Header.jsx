@@ -2,6 +2,7 @@ import { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
+import LOGOimg from "../assets/svg/skills/LOGO.svg";
 
 function CustomNavbar() {
   const [expanded, setExpanded] = useState(false);
@@ -22,7 +23,7 @@ function CustomNavbar() {
           <img
             alt=""
             // eslint-disable-next-line no-undef
-            src="../IMAGES/LOGO.svg"
+            src={LOGOimg}
             width="30"
             height="30"
             className="navbar-brand-img"
