@@ -8,11 +8,28 @@
 .dp-image{
     border-radius: 50%;
     filter: drop-shadow(0 2px 4px #60ffd9);
+    height: 90%;
+    width: 55%;
 }
 
 .dp-image:hover{
             filter: drop-shadow(0 2px 8px #60ffd9);
             z-index: 3;
+}
+
+@media(max-width:450px){
+    .dp-image{
+        height: 100%;
+            width: 70%;
+    }
+}
+
+@media(width: 1440px ){
+    .dp-image{
+        border-radius: 50%;
+        height: 80%;
+        width: 57%;
+    }
 }
 
 .about-head,.skills-heading{

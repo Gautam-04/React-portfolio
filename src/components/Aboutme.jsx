@@ -31,7 +31,7 @@ export default function Aboutme() {
 
   // If it's a small device, update the width in the marqueeStyle object
   if (isSmallDevice) {
-    marqueeStyle.width = "345px";
+    marqueeStyle.width = "111%";
   }
 
   return (
@@ -39,7 +39,7 @@ export default function Aboutme() {
       <div className="px-25  h-full w-full cursor-pointer mx-auto md:mx-150 flex flex-wrap py-5">
         <div className="w-full md:w-6/12 pl-5 flex flex-col justify-center items-center md:items-center">
           <img
-            className="dp-image h-full lg:h-[83.5%] w-[70%] sm:w-[80%] lg:w-6/12 py-4 lg:pr-10 px-2"
+            className="dp-image py-4 lg:pr-10 px-2"
             src="https://avatars.githubusercontent.com/u/124668418?v=4"
             alt="dp.png"
           />

@@ -17,7 +17,6 @@ export default function Herosection() {
     document.body.appendChild(bubles);
     setTimeout(function () {
       bubles.remove();
-      console.log("tu sam");
     }, 5000);
   });
 
@@ -45,10 +44,10 @@ export default function Herosection() {
           <p className="font-light text-5xl text-[#8892b6]">
             I build for the Web.
           </p>
-          <a href="https://react.school">
-            <button className="resume-button bg-[#09172b] text-[#8892b6] rounded-md mx-auto px-3 my-2">
+          <a href="https://drive.google.com/file/d/1iIiFdYYQBve5vtEpn9Y7UCkkO_yQI9uo/view">
+            <button className="resume-button bg-[#09172b] text-[#8892b6] rounded-[10px] mx-auto px-3 my-2">
               {" "}
-              Link Button{" "}
+              Resume{" "}
             </button>
           </a>
         </div>
