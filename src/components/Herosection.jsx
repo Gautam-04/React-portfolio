@@ -44,7 +44,7 @@ export default function Herosection() {
           <p className="font-light text-5xl text-[#8892b6]">
             I build for the Web.
           </p>
-          <a href="https://drive.google.com/file/d/1iIiFdYYQBve5vtEpn9Y7UCkkO_yQI9uo/view">
+          <a href="https://drive.google.com/file/d/1iIiFdYYQBve5vtEpn9Y7UCkkO_yQI9uo/view?usp=sharing">
             <button className="resume-button bg-[#09172b] text-[#8892b6] rounded-[10px] mx-auto px-3 my-2">
               {" "}
               Resume{" "}
