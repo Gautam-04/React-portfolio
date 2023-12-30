@@ -1,8 +1,9 @@
+import React from "react"
 import "./Hero.scss";
 import { useState,useEffect } from "react";
 import Undraw from "../assets/svg/skills/heroimg.svg";
 
-export default function Herosection() {
+const Herosection:React.FC = () => {
   // eslint-disable-next-line no-unused-vars
   let bubleArr = [];
   document.addEventListener("mousemove", (e) => {
@@ -17,10 +18,10 @@ export default function Herosection() {
     document.body.appendChild(bubles);
     setTimeout(function () {
       bubles.remove();
-    }, 5000);
+    }, 1000);
   });
 
-  const [opacity, setOpacity] = useState(0);
+  const [opacity, setOpacity] = useState<number>(0);
 
   useEffect(() => {
     setOpacity(1); // Set opacity to 1 when the component mounts
@@ -65,4 +66,6 @@ export default function Herosection() {
     </section>
   );
 }
+
+export default Herosection;
 

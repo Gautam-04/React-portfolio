@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
 import LOGOimg from "../assets/svg/skills/LOGO.svg";
 
-function CustomNavbar() {
-  const [expanded, setExpanded] = useState(false);
+const CustomNavbar: React.FC = () => {
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const handleToggle = () => {
     setExpanded(!expanded);
